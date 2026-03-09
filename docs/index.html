@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#e07b39" />
+    <meta name="description" content="일본 메뉴판 완전 정복 - 야키토리, 야키니쿠, 해산물, 이자카야 메뉴 가이드" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>오이시이 로드 🍜 일본 메뉴판 정복</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply theme before paint to prevent flash
+      (function () {
+        const saved = localStorage.getItem('oishii-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    <script type="module" crossorigin src="/oishii-road/assets/index-Cil2VynB.js"></script>
+    <link rel="stylesheet" crossorigin href="/oishii-road/assets/index-Ls7QWEO6.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
