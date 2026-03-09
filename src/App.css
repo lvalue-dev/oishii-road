@@ -1,0 +1,39 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.app-main {
+  min-height: 100vh;
+}
+
+.theme-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 72px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transition: transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:active {
+  transform: scale(0.9);
+}
+
+@media (min-width: 768px) {
+  .theme-toggle {
+    bottom: 16px;
+    right: 20px;
+  }
+}

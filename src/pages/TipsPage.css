@@ -1,0 +1,253 @@
+.tips-page {
+  padding-bottom: 80px;
+}
+
+.page-header {
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.tips-section {
+  padding: 20px 16px 8px;
+}
+
+.tips-section-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 14px;
+}
+
+/* 이자카야 팁 */
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tip-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.tip-card-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.tip-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tip-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.tip-card-content {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 소스 가이드 */
+.sauce-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sauce-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sauce-emoji {
+  font-size: 26px;
+}
+
+.sauce-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sauce-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 계절 */
+.season-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.season-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.season-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.season-icon {
+  font-size: 20px;
+}
+
+.season-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.season-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.season-list li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding-left: 12px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.season-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* 굽기 */
+.doneness-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doneness-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.doneness-level {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 90px;
+}
+
+.doneness-jp {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.doneness-ko {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.doneness-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .tips-page {
+    padding-bottom: 20px;
+    padding-top: 60px;
+  }
+
+  .page-header {
+    padding: 28px 32px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tips-section {
+    padding: 24px 32px 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tips-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .sauce-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .season-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .doneness-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .doneness-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,234 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-sheet {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.modal-handle {
+  width: 40px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 4px;
+  margin: 12px auto 0;
+  flex-shrink: 0;
+}
+
+.modal-accent-bar {
+  height: 4px;
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+.modal-content {
+  padding: 20px 20px 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.learn-step {
+  background: var(--surface-2);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step-badge {
+  display: inline-block;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.step-writing {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-kanji {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.modal-kana {
+  font-size: 16px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+.step-pronunciation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-pronunciation {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.speak-btn {
+  font-size: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.speak-btn:active {
+  transform: scale(0.92);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.step-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.modal-korean {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.modal-taste {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.modal-tip {
+  display: flex;
+  gap: 12px;
+  background: var(--tip-bg);
+  border-radius: 12px;
+  padding: 14px;
+  border-left: 3px solid #f1c40f;
+}
+
+.tip-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.modal-tip p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.fav-action {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.fav-action.active {
+  background: #fff9c4;
+  color: #7a6000;
+  border-color: #f1c40f;
+}
+
+[data-theme='dark'] .fav-action.active {
+  background: #3d3000;
+  color: #ffd966;
+}
+
+.close-action {
+  background: var(--accent);
+  color: #fff;
+  flex: 0.5;
+}
+
+@media (min-width: 768px) {
+  .modal-backdrop {
+    align-items: center;
+  }
+
+  .modal-sheet {
+    border-radius: 24px;
+    max-height: 85vh;
+    margin: 20px auto;
+  }
+
+  .modal-kanji {
+    font-size: 56px;
+  }
+
+  .modal-pronunciation {
+    font-size: 40px;
+  }
+}
